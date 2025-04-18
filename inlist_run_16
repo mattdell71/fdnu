@@ -1,0 +1,20 @@
+&star_job
+initial_zfracs = 3
+initial_h1 = 7.393662e-01
+initial_he3 = 1.380682e-05
+initial_he4 = 2.552000e-01
+initial_h2 = 2.000000e-05
+/
+&controls
+initial_z = 5.400000e-03
+mixing_length_alpha = 1.860000
+atm_T_tau_relation = "solar_Hopf"
+atm_T_tau_opacity = "varying"
+do_element_diffusion = .false.
+/
+&kap
+Zbase = 5.400000e-03
+kap_file_prefix = "gs98"
+kap_lowT_prefix = "lowT_fa05_gs98"
+kap_CO_prefix = "gs98_co"
+/

@@ -1,0 +1,22 @@
+&star_job
+initial_zfracs = 3
+initial_h1 = 7.367262e-01
+initial_he3 = 1.375568e-05
+initial_he4 = 2.578600e-01
+initial_h2 = 2.000000e-05
+/
+&controls
+initial_z = 5.380000e-03
+mixing_length_alpha = 1.800000
+atm_T_tau_relation = "Eddington"
+atm_T_tau_opacity = "varying"
+do_element_diffusion = .true.
+cool_wind_RGB_scheme = "Reimers"
+Reimers_scaling_factor = 0.2
+/
+&kap
+Zbase = 5.380000e-03
+kap_file_prefix = "gs98"
+kap_lowT_prefix = "lowT_fa05_gs98"
+kap_CO_prefix = "gs98_co"
+/

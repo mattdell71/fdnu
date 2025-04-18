@@ -1,0 +1,61 @@
+&star_job
+
+      show_log_description_at_start = .false.
+
+      create_pre_main_sequence_model = .true.
+      set_uniform_initial_composition = .true.
+      dump_missing_metals_into_heaviest = .true.
+
+      save_model_when_terminate = .false.
+
+      pgstar_flag = .false.
+      
+/ ! end of star_job namelist
+
+&eos
+      use_FreeEOS = .true.
+
+/ ! end of eos namelist
+
+&kap
+      use_Type2_opacities = .true.
+
+/ ! end of kap namelist
+
+&controls
+
+      initial_mass = 0.8
+
+       default_net_name = 'basic_plus_fe56_ni58.net'	
+
+      ! limit max_model_number as part of test_suite
+       ! when to stop
+        log_g_lower_limit =  1.4
+
+      MLT_option = 'ML1'
+
+      energy_eqn_option = 'eps_grav'
+      use_gold_tolerances = .false.
+      steps_before_use_gold_tolerances = 150
+
+      photo_interval = 10000
+      profile_interval = 10000
+      history_interval = 1
+      terminal_interval = 100
+      write_header_frequency = 10
+      max_num_profile_models = 1000
+
+      write_pulse_data_with_profile = .true.
+      pulse_data_format = 'GYRE' 
+      ! add point for r=0
+      add_center_point_to_pulse_data = .true. 
+      add_atmosphere_to_pulse_data = .true.
+
+     get_delta_nu_from_scaled_solar = .true.
+
+/ ! end of controls namelist
+
+
+
+&pgstar
+/ ! end of pgstar namelist
