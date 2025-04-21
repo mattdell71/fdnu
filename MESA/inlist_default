@@ -24,7 +24,7 @@
 
 &controls
 
-      initial_mass = 0.8
+      initial_mass = 1.0
 
        default_net_name = 'basic_plus_fe56_ni58.net'	
 
